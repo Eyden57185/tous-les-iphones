@@ -27,6 +27,11 @@
       margin-bottom: 30px;
     }
 
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
     .search-bar input {
       width: 90%;
       max-width: 500px;
@@ -43,43 +48,60 @@
       border-color: var(--accent-color);
     }
 
+    .era-title {
+      font-size: 1.4rem;
+      color: var(--accent-color);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 8px;
+      margin: 40px auto 20px auto;
+      max-width: 1200px;
+    }
+
     .iphone-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 15px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
+    /* Style de la carte avec image à côté du texte */
     .card {
       background-color: var(--card-bg);
-      border-radius: 18px;
-      padding: 20px;
+      border-radius: 14px;
+      padding: 15px;
       border: 1px solid var(--border-color);
-      position: relative;
+      transition: transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
 
-    .card h2 {
-      font-size: 1.3rem;
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .phone-thumb {
+      width: 60px;
+      height: 80px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .card-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
       margin: 0 0 5px 0;
     }
 
     .release-date {
       color: var(--text-secondary);
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-    }
-
-    .specs {
-      list-style: none;
-      padding: 0;
+      font-size: 0.85rem;
       margin: 0;
-      font-size: 0.9rem;
-      color: #d2d2d7;
-    }
-
-    .specs li {
-      margin-bottom: 6px;
     }
 
     footer {
@@ -93,44 +115,403 @@
 <body>
 
   <header>
-    <h1><span></span> iPhone Database</h1>
+    <h1> Encyclopédie iPhone</h1>
     <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Rechercher un iPhone...">
+      <input type="text" id="searchInput" placeholder="Rechercher un modèle (ex: iPhone 13, Air, Duo, SE)...">
     </div>
   </header>
 
-  <main class="iphone-grid" id="iphoneGrid">
-
-    <div class="card">
-      <h2>iPhone 17 Pro Max</h2>
-      <p class="release-date">Sortie : 2025</p>
-      <ul class="specs">
-        <li><strong>Écran :</strong> 6.9" Super Retina XDR ProMotion</li>
-        <li><strong>Puce :</strong> A19 Pro</li>
-        <li><strong>Stockage :</strong> 256 Go / 512 Go / 1 To</li>
-      </ul>
+  <main>
+    <!-- 2025 - 2026 -->
+    <h2 class="era-title">Générations récentes & futures (2025 - 2026)</h2>
+    <div class="iphone-grid">
+      <div class="card">
+        <img src="images/iphone-duo.png" alt="iPhone Duo" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone Duo</h3>
+          <p class="release-date">Sortie : 2026 (Pliable)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-air.png" alt="iPhone Air" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone Air</h3>
+          <p class="release-date">Sortie : 2026 (Ultra-fin)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-17e.png" alt="iPhone 17e" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 17e</h3>
+          <p class="release-date">Sortie : 2026</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-17-pro-max.png" alt="iPhone 17 Pro Max" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 17 Pro Max</h3>
+          <p class="release-date">Sortie : 2025</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-17-pro.png" alt="iPhone 17 Pro" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 17 Pro</h3>
+          <p class="release-date">Sortie : 2025</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-17.png" alt="iPhone 17" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 17</h3>
+          <p class="release-date">Sortie : 2025</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-16e.png" alt="iPhone 16e" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 16e</h3>
+          <p class="release-date">Sortie : 2025</p>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>iPhone SE (3ᵉ gén)</h2>
-      <p class="release-date">Sortie : 2022</p>
-      <ul class="specs">
-        <li><strong>Écran :</strong> 4.7" Retina HD</li>
-        <li><strong>Puce :</strong> A15 Bionic</li>
-        <li><strong>Stockage :</strong> 64 Go / 128 Go / 256 Go</li>
-      </ul>
+    <!-- 2022 - 2024 -->
+    <h2 class="era-title">L'ère Dynamic Island & USB-C (2022 - 2024)</h2>
+    <div class="iphone-grid">
+      <div class="card">
+        <img src="images/iphone-16-pro-max.png" alt="iPhone 16 Pro Max" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 16 Pro Max</h3>
+          <p class="release-date">Sortie : 2024</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-16-pro.png" alt="iPhone 16 Pro" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 16 Pro</h3>
+          <p class="release-date">Sortie : 2024</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-16-plus.png" alt="iPhone 16 Plus" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 16 Plus</h3>
+          <p class="release-date">Sortie : 2024</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-16.png" alt="iPhone 16" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 16</h3>
+          <p class="release-date">Sortie : 2024</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/13553403286107839269_0" alt="iPhone 15 Pro Max" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 15 Pro Max</h3>
+          <p class="release-date">Sortie : 2023 (Titane)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-15-pro.png" alt="iPhone 15 Pro" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 15 Pro</h3>
+          <p class="release-date">Sortie : 2023 (Titane)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-15-plus.png" alt="iPhone 15 Plus" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 15 Plus</h3>
+          <p class="release-date">Sortie : 2023 (USB-C)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-15.png" alt="iPhone 15" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 15</h3>
+          <p class="release-date">Sortie : 2023 (USB-C)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-14-pro-max.png" alt="iPhone 14 Pro Max" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 14 Pro Max</h3>
+          <p class="release-date">Sortie : 2022</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-14-pro.png" alt="iPhone 14 Pro" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 14 Pro</h3>
+          <p class="release-date">Sortie : 2022</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-14-plus.png" alt="iPhone 14 Plus" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 14 Plus</h3>
+          <p class="release-date">Sortie : 2022</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-14.png" alt="iPhone 14" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 14</h3>
+          <p class="release-date">Sortie : 2022</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-se-3.png" alt="iPhone SE 3" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone SE (3ᵉ gén)</h3>
+          <p class="release-date">Sortie : 2022</p>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>iPhone 2G (Original)</h2>
-      <p class="release-date">Sortie : 2007</p>
-      <ul class="specs">
-        <li><strong>Écran :</strong> 3.5" TFT LCD</li>
-        <li><strong>Puce :</strong> Samsung 32-bit RISC</li>
-        <li><strong>Stockage :</strong> 4 Go / 8 Go / 16 Go</li>
-      </ul>
+    <!-- 2017 - 2021 -->
+    <h2 class="era-title">Grands écrans & Face ID (2017 - 2021)</h2>
+    <div class="iphone-grid">
+      <div class="card">
+        <img src="images/iphone-13-pro-max.png" alt="iPhone 13 Pro Max" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 13 Pro Max</h3>
+          <p class="release-date">Sortie : 2021</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-13-pro.png" alt="iPhone 13 Pro" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 13 Pro</h3>
+          <p class="release-date">Sortie : 2021</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-13-mini.png" alt="iPhone 13 mini" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 13 mini</h3>
+          <p class="release-date">Sortie : 2021</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-13.png" alt="iPhone 13" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 13</h3>
+          <p class="release-date">Sortie : 2021</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-12-pro-max.png" alt="iPhone 12 Pro Max" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 12 Pro Max</h3>
+          <p class="release-date">Sortie : 2020</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-12-pro.png" alt="iPhone 12 Pro" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 12 Pro</h3>
+          <p class="release-date">Sortie : 2020</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-12-mini.png" alt="iPhone 12 mini" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 12 mini</h3>
+          <p class="release-date">Sortie : 2020</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-12.png" alt="iPhone 12" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 12</h3>
+          <p class="release-date">Sortie : 2020</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-se-2.png" alt="iPhone SE 2" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone SE (2ᵉ gén)</h3>
+          <p class="release-date">Sortie : 2020</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 11 Pro Max</h3>
+          <p class="release-date">Sortie : 2019</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-11-pro.png" alt="iPhone 11 Pro" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 11 Pro</h3>
+          <p class="release-date">Sortie : 2019</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-11.png" alt="iPhone 11" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 11</h3>
+          <p class="release-date">Sortie : 2019</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-xs-max.png" alt="iPhone XS Max" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone XS Max</h3>
+          <p class="release-date">Sortie : 2018</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-xs.png" alt="iPhone XS" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone XS</h3>
+          <p class="release-date">Sortie : 2018</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-xr.png" alt="iPhone XR" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone XR</h3>
+          <p class="release-date">Sortie : 2018</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-x.png" alt="iPhone X" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone X</h3>
+          <p class="release-date">Sortie : 2017</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-8-plus.png" alt="iPhone 8 Plus" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 8 Plus</h3>
+          <p class="release-date">Sortie : 2017</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-8.png" alt="iPhone 8" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 8</h3>
+          <p class="release-date">Sortie : 2017</p>
+        </div>
+      </div>
     </div>
 
+    <!-- 2007 - 2016 -->
+    <h2 class="era-title">Les débuts & Bouton Home (2007 - 2016)</h2>
+    <div class="iphone-grid">
+      <div class="card">
+        <img src="images/iphone-7-plus.png" alt="iPhone 7 Plus" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 7 Plus</h3>
+          <p class="release-date">Sortie : 2016</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-7.png" alt="iPhone 7" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 7</h3>
+          <p class="release-date">Sortie : 2016</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-se-1.png" alt="iPhone SE 1" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone SE (1ʳᵉ gén)</h3>
+          <p class="release-date">Sortie : 2016</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-6s-plus.png" alt="iPhone 6s Plus" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 6s Plus</h3>
+          <p class="release-date">Sortie : 2015</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-6s.png" alt="iPhone 6s" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 6s</h3>
+          <p class="release-date">Sortie : 2015</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-6-plus.png" alt="iPhone 6 Plus" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 6 Plus</h3>
+          <p class="release-date">Sortie : 2014</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-6.png" alt="iPhone 6" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 6</h3>
+          <p class="release-date">Sortie : 2014</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-5c.png" alt="iPhone 5c" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 5c</h3>
+          <p class="release-date">Sortie : 2013</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-5s.png" alt="iPhone 5s" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 5s</h3>
+          <p class="release-date">Sortie : 2013</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-5.png" alt="iPhone 5" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 5</h3>
+          <p class="release-date">Sortie : 2012</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-4s.png" alt="iPhone 4S" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 4S</h3>
+          <p class="release-date">Sortie : 2011</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-4.png" alt="iPhone 4" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 4</h3>
+          <p class="release-date">Sortie : 2010</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-3gs.png" alt="iPhone 3GS" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 3GS</h3>
+          <p class="release-date">Sortie : 2009</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-3g.png" alt="iPhone 3G" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone 3G</h3>
+          <p class="release-date">Sortie : 2008</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/iphone-2g.png" alt="iPhone 2G" class="phone-thumb">
+        <div class="card-info">
+          <h3>iPhone (2G)</h3>
+          <p class="release-date">Sortie : 2007</p>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -143,9 +524,9 @@
       let cards = document.querySelectorAll('.card');
 
       cards.forEach(card => {
-        let title = card.querySelector('h2').textContent.toLowerCase();
+        let title = card.querySelector('h3').textContent.toLowerCase();
         if (title.includes(filter)) {
-          card.style.display = "";
+          card.style.display = "flex";
         } else {
           card.style.display = "none";
         }
