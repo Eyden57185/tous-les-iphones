@@ -9,6 +9,7 @@
       --bg-color: #ffffff;
       --card-bg: #f5f5f7;
       --accent-color: #0071e3;
+      --accent-hover: #0077ed;
       --text-main: #1d1d1f;
       --text-secondary: #86868b;
       --border-color: #e5e5ea;
@@ -70,21 +71,21 @@
     .card {
       background-color: var(--card-bg);
       border-radius: 14px;
-      padding: 18px 20px;
+      padding: 20px;
       border: 1px solid var(--border-color);
-      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
+      justify-content: space-between;
     }
 
     .card:hover {
       transform: translateY(-3px);
-      border-color: var(--accent-color);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-info {
+      margin-bottom: 15px;
     }
 
     .card h3 {
@@ -97,6 +98,23 @@
       color: var(--text-secondary);
       font-size: 0.85rem;
       margin: 0;
+    }
+
+    .btn-detail {
+      display: inline-block;
+      text-align: center;
+      background-color: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-detail:hover {
+      background-color: var(--accent-hover);
     }
 
     footer {
@@ -121,36 +139,60 @@
     <h2 class="era-title">Générations récentes & futures (2025 - 2026)</h2>
     <div class="iphone-grid">
       <div class="card">
-        <h3>iPhone Duo</h3>
-        <p class="release-date">Sortie : 2026 (Pliable)</p>
+        <div class="card-info">
+          <h3>iPhone Duo</h3>
+          <p class="release-date">Sortie : 2026 (Pliable)</p>
+        </div>
+        <a href="iphone-duo.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 18 Pro Max</h3>
-        <p class="release-date">Sortie : 2026</p>
+        <div class="card-info">
+          <h3>iPhone 18 Pro Max</h3>
+          <p class="release-date">Sortie : 2026</p>
+        </div>
+        <a href="iphone-18-pro-max.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone Air</h3>
-        <p class="release-date">Sortie : 2026 (Ultra-fin)</p>
+        <div class="card-info">
+          <h3>iPhone Air</h3>
+          <p class="release-date">Sortie : 2026 (Ultra-fin)</p>
+        </div>
+        <a href="iphone-air.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 17e</h3>
-        <p class="release-date">Sortie : 2026</p>
+        <div class="card-info">
+          <h3>iPhone 17e</h3>
+          <p class="release-date">Sortie : 2026</p>
+        </div>
+        <a href="iphone-17e.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 17 Pro Max</h3>
-        <p class="release-date">Sortie : 2025</p>
+        <div class="card-info">
+          <h3>iPhone 17 Pro Max</h3>
+          <p class="release-date">Sortie : 2025</p>
+        </div>
+        <a href="iphone-17-pro-max.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 17 Pro</h3>
-        <p class="release-date">Sortie : 2025</p>
+        <div class="card-info">
+          <h3>iPhone 17 Pro</h3>
+          <p class="release-date">Sortie : 2025</p>
+        </div>
+        <a href="iphone-17-pro.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 17</h3>
-        <p class="release-date">Sortie : 2025</p>
+        <div class="card-info">
+          <h3>iPhone 17</h3>
+          <p class="release-date">Sortie : 2025</p>
+        </div>
+        <a href="iphone-17.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 16e</h3>
-        <p class="release-date">Sortie : 2025</p>
+        <div class="card-info">
+          <h3>iPhone 16e</h3>
+          <p class="release-date">Sortie : 2025</p>
+        </div>
+        <a href="iphone-16e.html" class="btn-detail">Voir la fiche</a>
       </div>
     </div>
 
@@ -158,56 +200,95 @@
     <h2 class="era-title">L'ère Dynamic Island & USB-C (2022 - 2024)</h2>
     <div class="iphone-grid">
       <div class="card">
-        <h3>iPhone 16 Pro Max</h3>
-        <p class="release-date">Sortie : 2024</p>
+        <div class="card-info">
+          <h3>iPhone 16 Pro Max</h3>
+          <p class="release-date">Sortie : 2024</p>
+        </div>
+        <a href="iphone-16-pro-max.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 16 Pro</h3>
-        <p class="release-date">Sortie : 2024</p>
+        <div class="card-info">
+          <h3>iPhone 16 Pro</h3>
+          <p class="release-date">Sortie : 2024</p>
+        </div>
+        <a href="iphone-16-pro.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 16 Plus</h3>
-        <p class="release-date">Sortie : 2024</p>
+        <div class="card-info">
+          <h3>iPhone 16 Plus</h3>
+          <p class="release-date">Sortie : 2024</p>
+        </div>
+        <a href="iphone-16-plus.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 16</h3>
-        <p class="release-date">Sortie : 2024</p>
+        <div class="card-info">
+          <h3>iPhone 16</h3>
+          <p class="release-date">Sortie : 2024</p>
+        </div>
+        <a href="iphone-16.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 15 Pro Max</h3>
-        <p class="release-date">Sortie : 2023 (Titane)</p>
+        <div class="card-info">
+          <h3>iPhone 15 Pro Max</h3>
+          <p class="release-date">Sortie : 2023 (Titane)</p>
+        </div>
+        <a href="iphone-15-pro-max.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 15 Pro</h3>
-        <p class="release-date">Sortie : 2023 (Titane)</p>
+        <div class="card-info">
+          <h3>iPhone 15 Pro</h3>
+          <p class="release-date">Sortie : 2023 (Titane)</p>
+        </div>
+        <a href="iphone-15-pro.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 15 Plus</h3>
-        <p class="release-date">Sortie : 2023 (USB-C)</p>
+        <div class="card-info">
+          <h3>iPhone 15 Plus</h3>
+          <p class="release-date">Sortie : 2023 (USB-C)</p>
+        </div>
+        <a href="iphone-15-plus.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 15</h3>
-        <p class="release-date">Sortie : 2023 (USB-C)</p>
+        <div class="card-info">
+          <h3>iPhone 15</h3>
+          <p class="release-date">Sortie : 2023 (USB-C)</p>
+        </div>
+        <a href="iphone-15.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 14 Pro Max</h3>
-        <p class="release-date">Sortie : 2022</p>
+        <div class="card-info">
+          <h3>iPhone 14 Pro Max</h3>
+          <p class="release-date">Sortie : 2022</p>
+        </div>
+        <a href="iphone-14-pro-max.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 14 Pro</h3>
-        <p class="release-date">Sortie : 2022</p>
+        <div class="card-info">
+          <h3>iPhone 14 Pro</h3>
+          <p class="release-date">Sortie : 2022</p>
+        </div>
+        <a href="iphone-14-pro.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 14 Plus</h3>
-        <p class="release-date">Sortie : 2022</p>
+        <div class="card-info">
+          <h3>iPhone 14 Plus</h3>
+          <p class="release-date">Sortie : 2022</p>
+        </div>
+        <a href="iphone-14-plus.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 14</h3>
-        <p class="release-date">Sortie : 2022</p>
+        <div class="card-info">
+          <h3>iPhone 14</h3>
+          <p class="release-date">Sortie : 2022</p>
+        </div>
+        <a href="iphone-14.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone SE (3ᵉ gén)</h3>
-        <p class="release-date">Sortie : 2022</p>
+        <div class="card-info">
+          <h3>iPhone SE (3ᵉ gén)</h3>
+          <p class="release-date">Sortie : 2022</p>
+        </div>
+        <a href="iphone-se-3.html" class="btn-detail">Voir la fiche</a>
       </div>
     </div>
 
@@ -215,76 +296,130 @@
     <h2 class="era-title">Grands écrans & Face ID (2017 - 2021)</h2>
     <div class="iphone-grid">
       <div class="card">
-        <h3>iPhone 13 Pro Max</h3>
-        <p class="release-date">Sortie : 2021</p>
+        <div class="card-info">
+          <h3>iPhone 13 Pro Max</h3>
+          <p class="release-date">Sortie : 2021</p>
+        </div>
+        <a href="iphone-13-pro-max.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 13 Pro</h3>
-        <p class="release-date">Sortie : 2021</p>
+        <div class="card-info">
+          <h3>iPhone 13 Pro</h3>
+          <p class="release-date">Sortie : 2021</p>
+        </div>
+        <a href="iphone-13-pro.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 13 mini</h3>
-        <p class="release-date">Sortie : 2021</p>
+        <div class="card-info">
+          <h3>iPhone 13 mini</h3>
+          <p class="release-date">Sortie : 2021</p>
+        </div>
+        <a href="iphone-13-mini.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 13</h3>
-        <p class="release-date">Sortie : 2021</p>
+        <div class="card-info">
+          <h3>iPhone 13</h3>
+          <p class="release-date">Sortie : 2021</p>
+        </div>
+        <a href="iphone-13.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 12 Pro Max</h3>
-        <p class="release-date">Sortie : 2020</p>
+        <div class="card-info">
+          <h3>iPhone 12 Pro Max</h3>
+          <p class="release-date">Sortie : 2020</p>
+        </div>
+        <a href="iphone-12-pro-max.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 12 Pro</h3>
-        <p class="release-date">Sortie : 2020</p>
+        <div class="card-info">
+          <h3>iPhone 12 Pro</h3>
+          <p class="release-date">Sortie : 2020</p>
+        </div>
+        <a href="iphone-12-pro.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 12 mini</h3>
-        <p class="release-date">Sortie : 2020</p>
+        <div class="card-info">
+          <h3>iPhone 12 mini</h3>
+          <p class="release-date">Sortie : 2020</p>
+        </div>
+        <a href="iphone-12-mini.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 12</h3>
-        <p class="release-date">Sortie : 2020</p>
+        <div class="card-info">
+          <h3>iPhone 12</h3>
+          <p class="release-date">Sortie : 2020</p>
+        </div>
+        <a href="iphone-12.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone SE (2ᵉ gén)</h3>
-        <p class="release-date">Sortie : 2020</p>
+        <div class="card-info">
+          <h3>iPhone SE (2ᵉ gén)</h3>
+          <p class="release-date">Sortie : 2020</p>
+        </div>
+        <a href="iphone-se-2.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 11 Pro Max</h3>
-        <p class="release-date">Sortie : 2019</p>
+        <div class="card-info">
+          <h3>iPhone 11 Pro Max</h3>
+          <p class="release-date">Sortie : 2019</p>
+        </div>
+        <a href="iphone-11-pro-max.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 11 Pro</h3>
-        <p class="release-date">Sortie : 2019</p>
+        <div class="card-info">
+          <h3>iPhone 11 Pro</h3>
+          <p class="release-date">Sortie : 2019</p>
+        </div>
+        <a href="iphone-11-pro.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 11</h3>
-        <p class="release-date">Sortie : 2019</p>
+        <div class="card-info">
+          <h3>iPhone 11</h3>
+          <p class="release-date">Sortie : 2019</p>
+        </div>
+        <a href="iphone-11.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone XS Max</h3>
-        <p class="release-date">Sortie : 2018</p>
+        <div class="card-info">
+          <h3>iPhone XS Max</h3>
+          <p class="release-date">Sortie : 2018</p>
+        </div>
+        <a href="iphone-xs-max.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone XS</h3>
-        <p class="release-date">Sortie : 2018</p>
+        <div class="card-info">
+          <h3>iPhone XS</h3>
+          <p class="release-date">Sortie : 2018</p>
+        </div>
+        <a href="iphone-xs.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone XR</h3>
-        <p class="release-date">Sortie : 2018</p>
+        <div class="card-info">
+          <h3>iPhone XR</h3>
+          <p class="release-date">Sortie : 2018</p>
+        </div>
+        <a href="iphone-xr.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone X</h3>
-        <p class="release-date">Sortie : 2017</p>
+        <div class="card-info">
+          <h3>iPhone X</h3>
+          <p class="release-date">Sortie : 2017</p>
+        </div>
+        <a href="iphone-x.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 8 Plus</h3>
-        <p class="release-date">Sortie : 2017</p>
+        <div class="card-info">
+          <h3>iPhone 8 Plus</h3>
+          <p class="release-date">Sortie : 2017</p>
+        </div>
+        <a href="iphone-8-plus.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 8</h3>
-        <p class="release-date">Sortie : 2017</p>
+        <div class="card-info">
+          <h3>iPhone 8</h3>
+          <p class="release-date">Sortie : 2017</p>
+        </div>
+        <a href="iphone-8.html" class="btn-detail">Voir la fiche</a>
       </div>
     </div>
 
@@ -292,64 +427,109 @@
     <h2 class="era-title">Les débuts & Bouton Home (2007 - 2016)</h2>
     <div class="iphone-grid">
       <div class="card">
-        <h3>iPhone 7 Plus</h3>
-        <p class="release-date">Sortie : 2016</p>
+        <div class="card-info">
+          <h3>iPhone 7 Plus</h3>
+          <p class="release-date">Sortie : 2016</p>
+        </div>
+        <a href="iphone-7-plus.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 7</h3>
-        <p class="release-date">Sortie : 2016</p>
+        <div class="card-info">
+          <h3>iPhone 7</h3>
+          <p class="release-date">Sortie : 2016</p>
+        </div>
+        <a href="iphone-7.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone SE (1ʳᵉ gén)</h3>
-        <p class="release-date">Sortie : 2016</p>
+        <div class="card-info">
+          <h3>iPhone SE (1ʳᵉ gén)</h3>
+          <p class="release-date">Sortie : 2016</p>
+        </div>
+        <a href="iphone-se-1.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 6s Plus</h3>
-        <p class="release-date">Sortie : 2015</p>
+        <div class="card-info">
+          <h3>iPhone 6s Plus</h3>
+          <p class="release-date">Sortie : 2015</p>
+        </div>
+        <a href="iphone-6s-plus.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 6s</h3>
-        <p class="release-date">Sortie : 2015</p>
+        <div class="card-info">
+          <h3>iPhone 6s</h3>
+          <p class="release-date">Sortie : 2015</p>
+        </div>
+        <a href="iphone-6s.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 6 Plus</h3>
-        <p class="release-date">Sortie : 2014</p>
+        <div class="card-info">
+          <h3>iPhone 6 Plus</h3>
+          <p class="release-date">Sortie : 2014</p>
+        </div>
+        <a href="iphone-6-plus.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 6</h3>
-        <p class="release-date">Sortie : 2014</p>
+        <div class="card-info">
+          <h3>iPhone 6</h3>
+          <p class="release-date">Sortie : 2014</p>
+        </div>
+        <a href="iphone-6.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 5c</h3>
-        <p class="release-date">Sortie : 2013</p>
+        <div class="card-info">
+          <h3>iPhone 5c</h3>
+          <p class="release-date">Sortie : 2013</p>
+        </div>
+        <a href="iphone-5c.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 5s</h3>
-        <p class="release-date">Sortie : 2013</p>
+        <div class="card-info">
+          <h3>iPhone 5s</h3>
+          <p class="release-date">Sortie : 2013</p>
+        </div>
+        <a href="iphone-5s.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 5</h3>
-        <p class="release-date">Sortie : 2012</p>
+        <div class="card-info">
+          <h3>iPhone 5</h3>
+          <p class="release-date">Sortie : 2012</p>
+        </div>
+        <a href="iphone-5.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 4S</h3>
-        <p class="release-date">Sortie : 2011</p>
+        <div class="card-info">
+          <h3>iPhone 4S</h3>
+          <p class="release-date">Sortie : 2011</p>
+        </div>
+        <a href="iphone-4s.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 4</h3>
-        <p class="release-date">Sortie : 2010</p>
+        <div class="card-info">
+          <h3>iPhone 4</h3>
+          <p class="release-date">Sortie : 2010</p>
+        </div>
+        <a href="iphone-4.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 3GS</h3>
-        <p class="release-date">Sortie : 2009</p>
+        <div class="card-info">
+          <h3>iPhone 3GS</h3>
+          <p class="release-date">Sortie : 2009</p>
+        </div>
+        <a href="iphone-3gs.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone 3G</h3>
-        <p class="release-date">Sortie : 2008</p>
+        <div class="card-info">
+          <h3>iPhone 3G</h3>
+          <p class="release-date">Sortie : 2008</p>
+        </div>
+        <a href="iphone-3g.html" class="btn-detail">Voir la fiche</a>
       </div>
       <div class="card">
-        <h3>iPhone (2G)</h3>
-        <p class="release-date">Sortie : 2007</p>
+        <div class="card-info">
+          <h3>iPhone (2G)</h3>
+          <p class="release-date">Sortie : 2007</p>
+        </div>
+        <a href="iphone-2g.html" class="btn-detail">Voir la fiche</a>
       </div>
     </div>
   </main>
