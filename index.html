@@ -6,12 +6,12 @@
   <title>L'Encyclopédie iPhone - Tous les modèles Apple</title>
   <style>
     :root {
-      --bg-color: #0b0b0e;
-      --card-bg: #16161a;
+      --bg-color: #ffffff;
+      --card-bg: #f5f5f7;
       --accent-color: #0071e3;
-      --text-main: #f5f5f7;
+      --text-main: #1d1d1f;
       --text-secondary: #86868b;
-      --border-color: #2c2c2e;
+      --border-color: #e5e5ea;
     }
 
     body {
@@ -30,6 +30,7 @@
     header h1 {
       font-size: 2rem;
       margin-bottom: 15px;
+      color: var(--text-main);
     }
 
     .search-bar input {
@@ -38,20 +39,21 @@
       padding: 12px 20px;
       border-radius: 20px;
       border: 1px solid var(--border-color);
-      background-color: #1c1c1e;
-      color: white;
+      background-color: #f2f2f7;
+      color: var(--text-main);
       font-size: 1rem;
       outline: none;
     }
 
     .search-bar input:focus {
       border-color: var(--accent-color);
+      background-color: #ffffff;
     }
 
     .era-title {
       font-size: 1.4rem;
       color: var(--accent-color);
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 2px solid var(--border-color);
       padding-bottom: 8px;
       margin: 40px auto 20px auto;
       max-width: 1200px;
@@ -68,106 +70,33 @@
     .card {
       background-color: var(--card-bg);
       border-radius: 14px;
-      padding: 15px;
+      padding: 18px 20px;
       border: 1px solid var(--border-color);
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
       display: flex;
-      align-items: center;
-      gap: 15px;
+      flex-direction: column;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
       cursor: pointer;
     }
 
     .card:hover {
       transform: translateY(-3px);
       border-color: var(--accent-color);
-    }
-
-    .phone-thumb {
-      width: 60px;
-      height: 80px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    .card-info {
-      display: flex;
-      flex-direction: column;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     .card h3 {
-      font-size: 1.05rem;
-      margin: 0 0 5px 0;
+      font-size: 1.1rem;
+      margin: 0 0 6px 0;
+      color: var(--text-main);
     }
 
     .release-date {
       color: var(--text-secondary);
       font-size: 0.85rem;
       margin: 0;
-    }
-
-    /* Modale (Pop-up) */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(8px);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .modal-content {
-      background-color: #1c1c1e;
-      border: 1px solid var(--border-color);
-      border-radius: 18px;
-      padding: 25px;
-      width: 90%;
-      max-width: 500px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-      position: relative;
-    }
-
-    .modal-title {
-      font-size: 1.6rem;
-      color: white;
-      border: 2px solid var(--border-color);
-      padding: 10px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      display: inline-block;
-      width: 80%;
-    }
-
-    .modal-body {
-      font-size: 1rem;
-      color: var(--text-main);
-      line-height: 1.6;
-      border-top: 1px solid var(--border-color);
-      padding-top: 15px;
-      text-align: left;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: #2c2c2e;
-      border: none;
-      color: white;
-      font-size: 1.2rem;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    .close-btn:hover {
-      background: #3a3a3c;
     }
 
     footer {
@@ -191,419 +120,245 @@
     <!-- 2025 - 2026 -->
     <h2 class="era-title">Générations récentes & futures (2025 - 2026)</h2>
     <div class="iphone-grid">
-      <div class="card" data-details="Premier iPhone pliant commercialisé par Apple, doté d'un écran flexible révolutionnaire.">
-        <img src="images/iphone-duo.png" alt="iPhone Duo" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone Duo</h3>
-          <p class="release-date">Sortie : 2026 (Pliable)</p>
-        </div>
+      <div class="card">
+        <h3>iPhone Duo</h3>
+        <p class="release-date">Sortie : 2026 (Pliable)</p>
       </div>
-      <div class="card" data-details="Le modèle le plus haut de gamme avec processeur A20 Bionic et écran Super Retina XDR géant.">
-        <img src="images/iphone-18-pro-max.png" alt="iPhone 18 Pro Max" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 18 Pro Max</h3>
-          <p class="release-date">Sortie : 2026</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 18 Pro Max</h3>
+        <p class="release-date">Sortie : 2026</p>
       </div>
-      <div class="card" data-details="Un modèle extrêmement fin avec un tout nouveau design ultra-léger en titane.">
-        <img src="images/iphone-air.png" alt="iPhone Air" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone Air</h3>
-          <p class="release-date">Sortie : 2026 (Ultra-fin)</p>
-        </div>
+      <div class="card">
+        <h3>iPhone Air</h3>
+        <p class="release-date">Sortie : 2026 (Ultra-fin)</p>
       </div>
-      <div class="card" data-details="Format compact et abordable intégrant les puces de dernière génération.">
-        <img src="images/iphone-17e.png" alt="iPhone 17e" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 17e</h3>
-          <p class="release-date">Sortie : 2026</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 17e</h3>
+        <p class="release-date">Sortie : 2026</p>
       </div>
-      <div class="card" data-details="Capteur photo téléobjectif amélioré et finition en titane raffinée.">
-        <img src="images/iphone-17-pro-max.png" alt="iPhone 17 Pro Max" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 17 Pro Max</h3>
-          <p class="release-date">Sortie : 2025</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 17 Pro Max</h3>
+        <p class="release-date">Sortie : 2025</p>
       </div>
-      <div class="card" data-details="Performances Pro dans un format 6.3 pouces très équilibré.">
-        <img src="images/iphone-17-pro.png" alt="iPhone 17 Pro" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 17 Pro</h3>
-          <p class="release-date">Sortie : 2025</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 17 Pro</h3>
+        <p class="release-date">Sortie : 2025</p>
       </div>
-      <div class="card" data-details="Écran ProMotion 120Hz enfin généralisé sur le modèle standard.">
-        <img src="images/iphone-17.png" alt="iPhone 17" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 17</h3>
-          <p class="release-date">Sortie : 2025</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 17</h3>
+        <p class="release-date">Sortie : 2025</p>
       </div>
-      <div class="card" data-details="Nouveau modèle d'entrée de gamme intégrant Apple Intelligence et écran OLED.">
-        <img src="images/iphone-16e.png" alt="iPhone 16e" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 16e</h3>
-          <p class="release-date">Sortie : 2025</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 16e</h3>
+        <p class="release-date">Sortie : 2025</p>
       </div>
     </div>
 
     <!-- 2022 - 2024 -->
     <h2 class="era-title">L'ère Dynamic Island & USB-C (2022 - 2024)</h2>
     <div class="iphone-grid">
-      <div class="card" data-details="Introduction de la commande de l'appareil photo, écran 6.9 pouces et puce A18 Pro.">
-        <img src="images/iphone-16-pro-max.png" alt="iPhone 16 Pro Max" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 16 Pro Max</h3>
-          <p class="release-date">Sortie : 2024</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 16 Pro Max</h3>
+        <p class="release-date">Sortie : 2024</p>
       </div>
-      <div class="card" data-details="Conçu pour Apple Intelligence avec bouton Commande de l'appareil photo.">
-        <img src="images/iphone-16-pro.png" alt="iPhone 16 Pro" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 16 Pro</h3>
-          <p class="release-date">Sortie : 2024</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 16 Pro</h3>
+        <p class="release-date">Sortie : 2024</p>
       </div>
-      <div class="card" data-details="Grand écran de 6.7 pouces et autonomie exceptionnelle.">
-        <img src="images/iphone-16-plus.png" alt="iPhone 16 Plus" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 16 Plus</h3>
-          <p class="release-date">Sortie : 2024</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 16 Plus</h3>
+        <p class="release-date">Sortie : 2024</p>
       </div>
-      <div class="card" data-details="Nouveau design d'appareil photo vertical et bouton Action.">
-        <img src="images/iphone-16.png" alt="iPhone 16" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 16</h3>
-          <p class="release-date">Sortie : 2024</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 16</h3>
+        <p class="release-date">Sortie : 2024</p>
       </div>
-      <div class="card" data-details="Premier iPhone en titane de qualité spatiale avec zoom optique 5x.">
-        <img src="images/iphone-15-pro-max.png" alt="iPhone 15 Pro Max" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 15 Pro Max</h3>
-          <p class="release-date">Sortie : 2023 (Titane)</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 15 Pro Max</h3>
+        <p class="release-date">Sortie : 2023 (Titane)</p>
       </div>
-      <div class="card" data-details="Boîtier en titane léger, bouton Action et port USB-C.">
-        <img src="images/iphone-15-pro.png" alt="iPhone 15 Pro" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 15 Pro</h3>
-          <p class="release-date">Sortie : 2023 (Titane)</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 15 Pro</h3>
+        <p class="release-date">Sortie : 2023 (Titane)</p>
       </div>
-      <div class="card" data-details="Grand écran avec Dynamic Island et connecteur USB-C.">
-        <img src="images/iphone-15-plus.png" alt="iPhone 15 Plus" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 15 Plus</h3>
-          <p class="release-date">Sortie : 2023 (USB-C)</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 15 Plus</h3>
+        <p class="release-date">Sortie : 2023 (USB-C)</p>
       </div>
-      <div class="card" data-details="Arrivée de la Dynamic Island et de l'USB-C sur le modèle standard.">
-        <img src="images/iphone-15.png" alt="iPhone 15" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 15</h3>
-          <p class="release-date">Sortie : 2023 (USB-C)</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 15</h3>
+        <p class="release-date">Sortie : 2023 (USB-C)</p>
       </div>
-      <div class="card" data-details="Introduction de la Dynamic Island et capteur principal 48 MP.">
-        <img src="images/iphone-14-pro-max.png" alt="iPhone 14 Pro Max" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 14 Pro Max</h3>
-          <p class="release-date">Sortie : 2022</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 14 Pro Max</h3>
+        <p class="release-date">Sortie : 2022</p>
       </div>
-      <div class="card" data-details="Premier modèle à intégrer la Dynamic Island et l'écran Toujours activé.">
-        <img src="images/iphone-14-pro.png" alt="iPhone 14 Pro" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 14 Pro</h3>
-          <p class="release-date">Sortie : 2022</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 14 Pro</h3>
+        <p class="release-date">Sortie : 2022</p>
       </div>
-      <div class="card" data-details="Remplacement de la version mini par un grand écran standard de 6.7 pouces.">
-        <img src="images/iphone-14-plus.png" alt="iPhone 14 Plus" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 14 Plus</h3>
-          <p class="release-date">Sortie : 2022</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 14 Plus</h3>
+        <p class="release-date">Sortie : 2022</p>
       </div>
-      <div class="card" data-details="Détection des accidents de la route et appels d'urgence par satellite.">
-        <img src="images/iphone-14.png" alt="iPhone 14" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 14</h3>
-          <p class="release-date">Sortie : 2022</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 14</h3>
+        <p class="release-date">Sortie : 2022</p>
       </div>
-      <div class="card" data-details="Design classique avec bouton Home, puce A15 Bionic et compatibilité 5G.">
-        <img src="images/iphone-se-3.png" alt="iPhone SE 3" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone SE (3ᵉ gén)</h3>
-          <p class="release-date">Sortie : 2022</p>
-        </div>
+      <div class="card">
+        <h3>iPhone SE (3ᵉ gén)</h3>
+        <p class="release-date">Sortie : 2022</p>
       </div>
     </div>
 
     <!-- 2017 - 2021 -->
     <h2 class="era-title">Grands écrans & Face ID (2017 - 2021)</h2>
     <div class="iphone-grid">
-      <div class="card" data-details="Écran ProMotion 120Hz et mode Cinématique pour la vidéo.">
-        <img src="images/iphone-13-pro-max.png" alt="iPhone 13 Pro Max" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 13 Pro Max</h3>
-          <p class="release-date">Sortie : 2021</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 13 Pro Max</h3>
+        <p class="release-date">Sortie : 2021</p>
       </div>
-      <div class="card" data-details="Écran Super Retina XDR avec ProMotion et triple capteur photo.">
-        <img src="images/iphone-13-pro.png" alt="iPhone 13 Pro" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 13 Pro</h3>
-          <p class="release-date">Sortie : 2021</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 13 Pro</h3>
+        <p class="release-date">Sortie : 2021</p>
       </div>
-      <div class="card" data-details="Format ultra compact de 5.4 pouces extrêmement puissant.">
-        <img src="images/iphone-13-mini.png" alt="iPhone 13 mini" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 13 mini</h3>
-          <p class="release-date">Sortie : 2021</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 13 mini</h3>
+        <p class="release-date">Sortie : 2021</p>
       </div>
-      <div class="card" data-details="Encoche réduite et capteurs photo disposés en diagonale.">
-        <img src="images/iphone-13.png" alt="iPhone 13" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 13</h3>
-          <p class="release-date">Sortie : 2021</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 13</h3>
+        <p class="release-date">Sortie : 2021</p>
       </div>
-      <div class="card" data-details="Grand écran 6.7 pouces avec téléobjectif x2.5 et capteur LiDAR.">
-        <img src="images/iphone-12-pro-max.png" alt="iPhone 12 Pro Max" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 12 Pro Max</h3>
-          <p class="release-date">Sortie : 2020</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 12 Pro Max</h3>
+        <p class="release-date">Sortie : 2020</p>
       </div>
-      <div class="card" data-details="Premier iPhone Pro au design à bords plats et scanner LiDAR.">
-        <img src="images/iphone-12-pro.png" alt="iPhone 12 Pro" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 12 Pro</h3>
-          <p class="release-date">Sortie : 2020</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 12 Pro</h3>
+        <p class="release-date">Sortie : 2020</p>
       </div>
-      <div class="card" data-details="Toute la puissance de l'iPhone 12 dans un boîtier compact de 5.4 pouces.">
-        <img src="images/iphone-12-mini.png" alt="iPhone 12 mini" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 12 mini</h3>
-          <p class="release-date">Sortie : 2020</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 12 mini</h3>
+        <p class="release-date">Sortie : 2020</p>
       </div>
-      <div class="card" data-details="Arrivée de la 5G, écran OLED et protection Ceramic Shield.">
-        <img src="images/iphone-12.png" alt="iPhone 12" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 12</h3>
-          <p class="release-date">Sortie : 2020</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 12</h3>
+        <p class="release-date">Sortie : 2020</p>
       </div>
-      <div class="card" data-details="Design d'iPhone 8 équipé de la puissante puce A13 Bionic.">
-        <img src="images/iphone-se-2.png" alt="iPhone SE 2" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone SE (2ᵉ gén)</h3>
-          <p class="release-date">Sortie : 2020</p>
-        </div>
+      <div class="card">
+        <h3>iPhone SE (2ᵉ gén)</h3>
+        <p class="release-date">Sortie : 2020</p>
       </div>
-      <div class="card" data-details="Premier modèle Apple 'Pro Max' avec autonomie record et verre dépoli.">
-        <img src="images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 11 Pro Max</h3>
-          <p class="release-date">Sortie : 2019</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 11 Pro Max</h3>
+        <p class="release-date">Sortie : 2019</p>
       </div>
-      <div class="card" data-details="Premier triple appareil photo Apple avec mode Nuit et ultra grand-angle.">
-        <img src="images/iphone-11-pro.png" alt="iPhone 11 Pro" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 11 Pro</h3>
-          <p class="release-date">Sortie : 2019</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 11 Pro</h3>
+        <p class="release-date">Sortie : 2019</p>
       </div>
-      <div class="card" data-details="Double appareil photo arrière et déclinaison en plusieurs couleurs vives.">
-        <img src="images/iphone-11.png" alt="iPhone 11" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 11</h3>
-          <p class="release-date">Sortie : 2019</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 11</h3>
+        <p class="release-date">Sortie : 2019</p>
       </div>
-      <div class="card" data-details="Version grand écran de 6.5 pouces du mythique design de l'iPhone X.">
-        <img src="images/iphone-xs-max.png" alt="iPhone XS Max" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone XS Max</h3>
-          <p class="release-date">Sortie : 2018</p>
-        </div>
+      <div class="card">
+        <h3>iPhone XS Max</h3>
+        <p class="release-date">Sortie : 2018</p>
       </div>
-      <div class="card" data-details="Évolution de l'iPhone X avec la puce A12 Bionic et finition or.">
-        <img src="images/iphone-xs.png" alt="iPhone XS" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone XS</h3>
-          <p class="release-date">Sortie : 2018</p>
-        </div>
+      <div class="card">
+        <h3>iPhone XS</h3>
+        <p class="release-date">Sortie : 2018</p>
       </div>
-      <div class="card" data-details="Écran Liquid Retina LCD, proposé dans une large gamme de couleurs.">
-        <img src="images/iphone-xr.png" alt="iPhone XR" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone XR</h3>
-          <p class="release-date">Sortie : 2018</p>
-        </div>
+      <div class="card">
+        <h3>iPhone XR</h3>
+        <p class="release-date">Sortie : 2018</p>
       </div>
-      <div class="card" data-details="Révolution pour les 10 ans de l'iPhone : écran borderless OLED et Face ID.">
-        <img src="images/iphone-x.png" alt="iPhone X" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone X</h3>
-          <p class="release-date">Sortie : 2017</p>
-        </div>
+      <div class="card">
+        <h3>iPhone X</h3>
+        <p class="release-date">Sortie : 2017</p>
       </div>
-      <div class="card" data-details="Dos en verre pour la recharge sans fil Qi et écran True Tone.">
-        <img src="images/iphone-8-plus.png" alt="iPhone 8 Plus" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 8 Plus</h3>
-          <p class="release-date">Sortie : 2017</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 8 Plus</h3>
+        <p class="release-date">Sortie : 2017</p>
       </div>
-      <div class="card" data-details="Dernier modèle classique compact avec dos en verre et recharge sans fil.">
-        <img src="images/iphone-8.png" alt="iPhone 8" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 8</h3>
-          <p class="release-date">Sortie : 2017</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 8</h3>
+        <p class="release-date">Sortie : 2017</p>
       </div>
     </div>
 
     <!-- 2007 - 2016 -->
     <h2 class="era-title">Les débuts & Bouton Home (2007 - 2016)</h2>
     <div class="iphone-grid">
-      <div class="card" data-details="Premier iPhone avec double appareil photo et mode Portrait.">
-        <img src="images/iphone-7-plus.png" alt="iPhone 7 Plus" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 7 Plus</h3>
-          <p class="release-date">Sortie : 2016</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 7 Plus</h3>
+        <p class="release-date">Sortie : 2016</p>
       </div>
-      <div class="card" data-details="Abandon de la prise jack, bouton Home capacitif et résistance à l'eau.">
-        <img src="images/iphone-7.png" alt="iPhone 7" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 7</h3>
-          <p class="release-date">Sortie : 2016</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 7</h3>
+        <p class="release-date">Sortie : 2016</p>
       </div>
-      <div class="card" data-details="Performances de l'iPhone 6s dans le châssis compact de 4 pouces de l'iPhone 5s.">
-        <img src="images/iphone-se-1.png" alt="iPhone SE 1" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone SE (1ʳᵉ gén)</h3>
-          <p class="release-date">Sortie : 2016</p>
-        </div>
+      <div class="card">
+        <h3>iPhone SE (1ʳᵉ gén)</h3>
+        <p class="release-date">Sortie : 2016</p>
       </div>
-      <div class="card" data-details="Écran 5.5 pouces avec stabilisateur optique et 3D Touch.">
-        <img src="images/iphone-6s-plus.png" alt="iPhone 6s Plus" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 6s Plus</h3>
-          <p class="release-date">Sortie : 2015</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 6s Plus</h3>
+        <p class="release-date">Sortie : 2015</p>
       </div>
-      <div class="card" data-details="Introduction de la technologie 3D Touch et de la couleur Or Rose.">
-        <img src="images/iphone-6s.png" alt="iPhone 6s" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 6s</h3>
-          <p class="release-date">Sortie : 2015</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 6s</h3>
+        <p class="release-date">Sortie : 2015</p>
       </div>
-      <div class="card" data-details="Premier modèle 'Plus' d'Apple avec grand écran 5.5 pouces Full HD.">
-        <img src="images/iphone-6-plus.png" alt="iPhone 6 Plus" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 6 Plus</h3>
-          <p class="release-date">Sortie : 2014</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 6 Plus</h3>
+        <p class="release-date">Sortie : 2014</p>
       </div>
-      <div class="card" data-details="Nouveau design arrondi et écran agrandi à 4.7 pouces.">
-        <img src="images/iphone-6.png" alt="iPhone 6" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 6</h3>
-          <p class="release-date">Sortie : 2014</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 6</h3>
+        <p class="release-date">Sortie : 2014</p>
       </div>
-      <div class="card" data-details="Coque colorée en polycarbonate plastique.">
-        <img src="images/iphone-5c.png" alt="iPhone 5c" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 5c</h3>
-          <p class="release-date">Sortie : 2013</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 5c</h3>
+        <p class="release-date">Sortie : 2013</p>
       </div>
-      <div class="card" data-details="Premier iPhone avec capteur d'empreintes Touch ID et processeur 64 bits.">
-        <img src="images/iphone-5s.png" alt="iPhone 5s" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 5s</h3>
-          <p class="release-date">Sortie : 2013</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 5s</h3>
+        <p class="release-date">Sortie : 2013</p>
       </div>
-      <div class="card" data-details="Nouvel écran 4 pouces, boîtier en aluminium et connecteur Lightning.">
-        <img src="images/iphone-5.png" alt="iPhone 5" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 5</h3>
-          <p class="release-date">Sortie : 2012</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 5</h3>
+        <p class="release-date">Sortie : 2012</p>
       </div>
-      <div class="card" data-details="Lancement de l'assistant vocal Siri et processeur double cœur A5.">
-        <img src="images/iphone-4s.png" alt="iPhone 4S" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 4S</h3>
-          <p class="release-date">Sortie : 2011</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 4S</h3>
+        <p class="release-date">Sortie : 2011</p>
       </div>
-      <div class="card" data-details="Design en verre et acier inoxydable avec le premier écran Retina.">
-        <img src="images/iphone-4.png" alt="iPhone 4" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 4</h3>
-          <p class="release-date">Sortie : 2010</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 4</h3>
+        <p class="release-date">Sortie : 2010</p>
       </div>
-      <div class="card" data-details="Deux fois plus rapide avec enregistrement vidéo et boussole intégrée.">
-        <img src="images/iphone-3gs.png" alt="iPhone 3GS" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 3GS</h3>
-          <p class="release-date">Sortie : 2009</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 3GS</h3>
+        <p class="release-date">Sortie : 2009</p>
       </div>
-      <div class="card" data-details="Arrivée de la connectivité 3G, du GPS et de l'App Store.">
-        <img src="images/iphone-3g.png" alt="iPhone 3G" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone 3G</h3>
-          <p class="release-date">Sortie : 2008</p>
-        </div>
+      <div class="card">
+        <h3>iPhone 3G</h3>
+        <p class="release-date">Sortie : 2008</p>
       </div>
-      <div class="card" data-details="Le tout premier iPhone présenté par Steve Jobs en 2007.">
-        <img src="images/iphone-2g.png" alt="iPhone 2G" class="phone-thumb">
-        <div class="card-info">
-          <h3>iPhone (2G)</h3>
-          <p class="release-date">Sortie : 2007</p>
-        </div>
+      <div class="card">
+        <h3>iPhone (2G)</h3>
+        <p class="release-date">Sortie : 2007</p>
       </div>
     </div>
   </main>
-
-  <!-- Fenêtre Pop-up (Modale) -->
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-content">
-      <button class="close-btn" id="closeBtn">&times;</button>
-      <div class="modal-title" id="modalTitle">Nom iPhone</div>
-      <div class="modal-body" id="modalText">
-        Texte d'information sur l'iPhone...
-      </div>
-    </div>
-  </div>
 
   <footer>
     <p>© Tous droits réservés — Encyclopédie iPhone</p>
   </footer>
 
   <script>
-    // Recherche
     document.getElementById('searchInput').addEventListener('keyup', function() {
       let filter = this.value.toLowerCase();
       let cards = document.querySelectorAll('.card');
@@ -616,34 +371,6 @@
           card.style.display = "none";
         }
       });
-    });
-
-    // Pop-up au clic sur une carte
-    const modalOverlay = document.getElementById('modalOverlay');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalText = document.getElementById('modalText');
-    const closeBtn = document.getElementById('closeBtn');
-
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('click', () => {
-        const title = card.querySelector('h3').textContent;
-        const details = card.getAttribute('data-details') || 'Informations bientôt disponibles pour ce modèle.';
-        
-        modalTitle.textContent = title;
-        modalText.textContent = details;
-        modalOverlay.style.display = 'flex';
-      });
-    });
-
-    // Fermer le pop-up
-    closeBtn.addEventListener('click', () => {
-      modalOverlay.style.display = 'none';
-    });
-
-    modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) {
-        modalOverlay.style.display = 'none';
-      }
     });
   </script>
 </body>
