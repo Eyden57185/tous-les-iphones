@@ -29,7 +29,26 @@
 
     header h1 {
       font-size: 2rem;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      background-color: #1c1c1e;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .back-link:hover {
+      background-color: #2c2c2e;
+      border-color: var(--accent-color);
     }
 
     .search-bar input {
@@ -174,6 +193,8 @@
 
   <header>
     <h1> Encyclopédie iPhone</h1>
+    <!-- Bouton de retour vers la page des ISO macOS -->
+    <a href="URL_DE_TON_LIEN_MACOS_ISO" class="back-link">← Retour aux ISO macOS</a>
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Rechercher un modèle (ex: iPhone 18 Pro Max, Air, Duo)...">
     </div>
